@@ -402,7 +402,7 @@ module Viewpoint::EWS::Types
         msg.draft = true
         resp = validate_created_item(ews.create_item(msg.to_ews))
         msg.file_attachments.each do |f|
-          next unless f.kind_of?(File)
+          next unless f.kind_of?(File) or f.kind_of?(Tempfile)
           resp.add_file_attachment(f)
         end
         if draft
