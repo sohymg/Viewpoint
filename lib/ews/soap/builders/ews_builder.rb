@@ -1043,7 +1043,7 @@ module Viewpoint::EWS::SOAP
 
     # @see http://msdn.microsoft.com/en-us/library/ff709497(v=exchg.140).aspx
     def return_new_item_ids!(retval)
-      @nbuild.ReturnNewItemIds(retval)
+      # @nbuild.ReturnNewItemIds(retval)
     end
 
     def inline_attachment!(fa)
